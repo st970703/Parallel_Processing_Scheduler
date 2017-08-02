@@ -1,12 +1,13 @@
-package interfaces;
+package Node;
 
+import javafx.scene.shape.Arc;
 
 import java.util.List;
 
 /**
- * Created by st970 (Mike Lee) on 31/07/2017.
+ * Created by st970 on 31/07/2017.
  */
-public interface Node {
+interface Node {
     /**
      * getName() returns the name of the current node.
      * @return String
@@ -36,30 +37,11 @@ public interface Node {
      * getPredecessors( ) returns the list of predecessor nodes.
      * @return List<Node>
      */
-    List<Node> getPredecessors( );
+    List<Node> getPredecessors();
 
     /**
      * getSuccessors( ) returns the list of successor nodes.
      * @return List<Node>
      */
-    List<Node> getSuccessors( );
-
-    /*Getter methods*/
-    int getBestStartTime();
-
-    String getBestProcessor();
-
-    int getCurrentStartTime();
-
-    String getCurrentProcessor();
-
-    /*Setter methods*/
-    int setBestStartTime();
-
-    String setBestProcessor();
-
-    int setCurrentStartTime();
-
-    String setCurrentProcessor();
-
+    List<Node> getSuccessors();
 }

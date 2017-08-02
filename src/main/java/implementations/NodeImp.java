@@ -22,10 +22,10 @@ public class NodeImp implements Node {
 	private List<Arc> _outgoing;
 	private List<Arc> _ingoing;
 	
-	int _bestStartTime;
-	int _bestProcessor;
-	int _currentStartTime;
-	int _currentProcessor;
+	private int _bestStartTime;
+	private int _bestProcessor;
+	private int _currentStartTime;
+	private int _currentProcessor;
 	
 	/**
 	 * Constructor for the NodeImp to make a NodeImp object given a name and a weight
@@ -35,6 +35,9 @@ public class NodeImp implements Node {
 	public NodeImp(String name, int weight){
 		_name = name;
 		_weight = weight;
+
+		_outgoing = new ArrayList<Arc>();
+		_ingoing = new ArrayList<Arc>();
 	}
 	
 	@Override
@@ -74,5 +77,46 @@ public class NodeImp implements Node {
 		}
 		return successors;
 	}
+
+	//todo implement getter and setter methods
+    @Override
+    public int getBestStartTime() {
+        return 0;
+    }
+
+    @Override
+    public String getBestProcessor() {
+        return null;
+    }
+
+    @Override
+    public int getCurrentStartTime() {
+        return 0;
+    }
+
+    @Override
+    public String getCurrentProcessor() {
+        return null;
+    }
+
+    @Override
+    public int setBestStartTime() {
+        return 0;
+    }
+
+    @Override
+    public String setBestProcessor() {
+        return null;
+    }
+
+    @Override
+    public int setCurrentStartTime() {
+        return 0;
+    }
+
+    @Override
+    public String setCurrentProcessor() {
+        return null;
+    }
 
 }
