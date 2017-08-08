@@ -55,4 +55,9 @@ public class Algorithm {
 	public List<List<AlgorithmNode>> getSchedules() {
 		return _generatedSchedules;
 	}
+
+	public boolean checkAlgorithmNode( List<AlgorithmNode> schedule){
+		//return t or f
+		return false;
+	}
 }
