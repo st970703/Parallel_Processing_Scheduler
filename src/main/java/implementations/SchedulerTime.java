@@ -1,8 +1,8 @@
 package implementations;
 
-import java.util.List;
-
 import implementations.algorithm.AlgorithmNode;
+
+import java.util.List;
 
 /**
  * This class represents the time taken for a particular scheduler
@@ -20,11 +20,12 @@ import implementations.algorithm.AlgorithmNode;
 public class SchedulerTime {
 	private List<AlgorithmNode> _algNodes;
 	//The index for this field should match the index for the list of nodes.
-	private int[] _startTimeForNode = new int[_algNodes.size()];
+	private int[] _startTimeForNode;// = new int[];
 	private int _totalTime;
 	
 	public SchedulerTime (List<AlgorithmNode> algNodes) {
 		_algNodes = algNodes;
+		_startTimeForNode = new int[_algNodes.size()];
 	}
 	
 	/**

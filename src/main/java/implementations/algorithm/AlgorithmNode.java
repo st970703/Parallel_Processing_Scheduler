@@ -1,6 +1,5 @@
 package implementations.algorithm;
 
-import implementations.NodeImp;
 import interfaces.Node;
 
 import java.util.ArrayList;
@@ -35,26 +34,13 @@ public class AlgorithmNode {
 		return algorithmNodeList;
 	}
 
-	public static List<AlgorithmNode> convertAlgorithimNodetoNode(List<AlgorithmNode> aNodes) {
-		List<Node> nodes = new ArrayList<Node>();
-
-		for (AlgorithmNode aNode : aNodes) {
-			nodes.add(new NodeImp(aNode.getNodeName()));
-		}
-
-		return nodes;
-	}
-
 	/**
 	 * Create a copy of the AlgorithmNode object
 	 *
 	 * @return a copy of the AlgorithmNode
 	 */
 	public AlgorithmNode createClone() {
-		AlgorithmNode node = new AlgorithmNode(_nodeName);
-		node.setCore(_core);
-
-		return node;
+		return new AlgorithmNode(_nodeName);
 	}
 
 	public String getNodeName() {
