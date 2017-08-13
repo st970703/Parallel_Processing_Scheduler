@@ -1,7 +1,7 @@
 package dummyClasses;
 
-import interfaces.Arc;
-import interfaces.Node;
+import interfaces.structures.Arc;
+import interfaces.structures.Node;
 
 import java.util.List;
 
@@ -40,6 +40,16 @@ public class DummyNode implements Node{
 
     @Override
     public List<Node> getSuccessors() {
+        return null;
+    }
+
+    @Override
+    public Arc getInArc(Node node) {
+        return null;
+    }
+
+    @Override
+    public Arc getOutArc(Node node) {
         return null;
     }
 }
