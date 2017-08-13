@@ -25,9 +25,12 @@ local.properties
 
 # Locally stored "Eclipse launch configurations"
 *.launch
+<<<<<<< HEAD
 
 ### Intellij ###
 .idea/*
 target/*
 *.yml
 *.iml
+=======
+>>>>>>> parent of b245f37... null check in checkValidScheduleWrapper()
