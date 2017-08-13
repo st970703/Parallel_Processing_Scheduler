@@ -105,7 +105,8 @@ public class TestAlgorithmImp {
 
 		assertTrue(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "e", "b", "c"})));
 
-		assertTrue(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "b", "c", "e"})));
+		// invalid, because c requires e to be finished first
+		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "b", "c", "e"})));
 
 		//test null, it should return invalid
 		assertFalse(alg.checkValidScheduleWrapper(null));
