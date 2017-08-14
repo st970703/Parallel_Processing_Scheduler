@@ -25,13 +25,12 @@ local.properties
 
 # Locally stored "Eclipse launch configurations"
 *.launch
-<<<<<<< HEAD
 
-### Intellij ###
-.idea/*
-target/*
-*.yml
+### Intellij Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 *.iml
-=======
->>>>>>> parent of b245f37... null check in checkValidScheduleWrapper()
-tinationqut
+*.xml
+.idea/*
+
+#.gitignore
+*.yml
