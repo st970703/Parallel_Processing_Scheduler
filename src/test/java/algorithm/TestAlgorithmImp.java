@@ -2,10 +2,9 @@ package algorithm;
 
 import implementations.algorithm.AlgorithmImp;
 import implementations.algorithm.AlgorithmNodeImp;
-import implementations.io.ConversionImp;
+import implementations.io.Conversion;
 import implementations.io.InputImp;
 import implementations.structures.ScheduleImp;
-import interfaces.io.Conversion;
 import interfaces.io.Input;
 import org.junit.Test;
 
@@ -53,9 +52,9 @@ public class TestAlgorithmImp {
 		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"d"})));
 
 		// invalid because "d" cannot be processed before the sucessors "b", "c" are finished.//
-		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "b", "d", "c"})));
+		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "b", "d"})));
 
-		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "d", "b", "c"})));
+		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "d"})));
 	}
 	
 	/**
@@ -106,7 +105,8 @@ public class TestAlgorithmImp {
 		assertTrue(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "e", "b", "c"})));
 
 		// invalid, because c requires e to be finished first
-		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "b", "c", "e"})));
+		//	Removed "e".
+		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "b", "c"})));
 
 		//test null, it should return invalid
 		assertFalse(alg.checkValidScheduleWrapper(null));
@@ -155,9 +155,7 @@ public class TestAlgorithmImp {
 		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"b"})));
 
 		// invalid because "d" cannot be processed before the sucessors "b", "c" are finished.//
-		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "b", "d", "e", "c"})));
-
-		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "b", "d", "c", "e"})));
+		assertFalse(alg.checkValidScheduleWrapper(generateAlgorithmNodes(new String[]{"a", "b", "d"})));
 	}
 
 	/**
@@ -349,7 +347,7 @@ public class TestAlgorithmImp {
 	 */
 	private AlgorithmImp computeAlgorithmFromInput(String path, String core) {
 		Input input = new InputImp(path, core);
-		Conversion conversion = new ConversionImp(input);
-		return new AlgorithmImp(conversion.getDAG(), input.getProcessorCount());
+		Conversion conversion = new Conversion(input);
+		return new AlgorithmImp(input.getProcessorCount());
 	}
 }
