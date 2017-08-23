@@ -1,0 +1,45 @@
+//package algorithm;
+//
+//import implementations.ConversionImp;
+//import implementations.algorithm.Algorithm;
+//import implementations.algorithm.AlgorithmNode_bak;
+//import implementations.input.InputImp;
+//import interfaces.Conversion;
+//import interfaces.Input;
+//import org.junit.Test;
+//
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//import static junit.framework.TestCase.assertEquals;
+//
+//public class TestAlgorithm_bak {
+//	public static final String FILENAME = "test.dot";
+//
+//	@Test
+//	public void testGenerateSchedule() {
+//		Input input = new InputImp(FILENAME, "2");
+//		Conversion conversion = new ConversionImp(input);
+//		Algorithm alg = new Algorithm(conversion.getDAG(), input.getProcessorCount());
+//
+//		List<List<AlgorithmNode_bak>> schedules = alg.getSchedules();
+//
+//		assertEquals(384, schedules.size());
+//
+//		StringBuilder sb = new StringBuilder();
+//		for (AlgorithmNode_bak node : schedules.get(0)) {
+//			sb.append(node.getNodeName() + node.getCore() + " ");
+//		}
+//
+//		assertEquals("a0 b0 c0 d0", sb.toString().trim());
+//	}
+//
+//	@Test
+//	public void checkAlgorithmNode_defaultTestCase() {
+//		List<AlgorithmNode_bak> schedule = new ArrayList<>();
+//
+//		AlgorithmNode_bak node_a
+//schedule.add
+//
+//	}
+//}
