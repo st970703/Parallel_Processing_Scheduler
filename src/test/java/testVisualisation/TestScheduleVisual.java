@@ -27,7 +27,6 @@ public class TestScheduleVisual {
 	public void initialise(){
 		Input input = new InputImp(FILENAME, "2");
 		Conversion conversion = new ConversionImp(input);
-
 		dag = conversion.getDAG();
 		_cores = input.getProcessorCount();
 		

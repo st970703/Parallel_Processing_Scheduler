@@ -17,9 +17,7 @@ public class VisualMain {
 	public static void main(String args[]) {
 		/*Input input = new InputImp(args[0], args[1]);
 		Conversion conversion = new ConversionImp(input);
-
 		DAG dag = conversion.getDAG();
-
 		AlgorithmImp alg = new AlgorithmImp(dag, input.getProcessorCount());
 		TableModel _schedule = new TableModel(alg,dag,input.getProcessorCount());
 		
