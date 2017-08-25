@@ -1,6 +1,7 @@
 package visualisation;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 
@@ -26,15 +27,11 @@ public class GraphViewImp extends JFrame implements GraphView {
 		        return super.getCellRenderer(row, column);
 		    }
 		};
-    
-		//table.scrollRectToVisible(table.getCellRect(table.getRowCount()-1, 0, true));
+
 		table.setFillsViewportHeight(true);
 		JScrollPane pane = new JScrollPane(table);
-		
+
 		add(pane, BorderLayout.CENTER);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(500,520);
-		setVisible(true);
 	}
 	
 	public JScrollPane getPane(){
@@ -46,7 +43,7 @@ public class GraphViewImp extends JFrame implements GraphView {
 			throw new RuntimeException("Table not initialised. Constructor for Table Model not called"
 					+ " or did not execute as expected.");
 		}
-
+		
 		return pane;
 	}
 	
